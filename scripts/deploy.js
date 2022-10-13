@@ -5,10 +5,10 @@ async function main() {
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const Token = await ethers.getContractFactory("BadgeToken");
-  const token = await Token.deploy("BadgeToken", "Badge");
+  const Token = await ethers.getContractFactory("CoinToken");
+  const token = await Token.deploy("shotacoin", "STC");
 
-  console.log("Token address:", token.address);
+  console.log("Contract address:", token.address);
 }
 
 main()
